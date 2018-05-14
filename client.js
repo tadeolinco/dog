@@ -2,7 +2,6 @@
 // If you want to modify your application's content, start in "index.js"
 
 import { ReactInstance } from 'react-360-web';
-
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
     // Add custom options here
@@ -18,8 +17,7 @@ function init(bundle, parent, options = {}) {
     r360.getDefaultSurface()
   );
 
-  // Load the initial environment
-  r360.compositor.setBackground(r360.getAssetURL('Nature-Dog-Wallpaper.jpg'));
+  r360.compositor.setBackground(null);
 }
 
 window.React360 = { init };
